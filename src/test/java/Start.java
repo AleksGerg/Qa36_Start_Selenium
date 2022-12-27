@@ -1,3 +1,4 @@
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
@@ -17,15 +18,10 @@ public class Start {
         //wd.navigate().refresh();
         //wd.close(); // for 1 tab
         wd.quit(); // all tabs
+        
 
 
     }
-    @Test
-    public void secondTest(){
-
-    }
-
-
 
 
 }

@@ -3,6 +3,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -99,8 +100,38 @@ public class Login {
         button.get(1).click();
 
 
+    }
 
+    @Test
+    public void ccslocatrstest() {
+
+        wd.findElement(By.linkText("LOGIN")).click();
+
+        wd.findElement(By.tagName("div"));
+        wd.findElement(By.cssSelector("div#root"));//id
+
+        wd.findElements(By.cssSelector("div.container"));//class
+        wd.findElement((By.cssSelector(".navbar-component_nav__1X_4m")));//class
+        wd.findElement(By.cssSelector(".login_login__3EHKB"));// class
+
+        wd.findElement((By.cssSelector("div :last-of-type")));//finding the inscription PHONEBOOK
+
+        wd.findElement((By.cssSelector("input[placeholder^='Pass']")));
+        wd.findElement((By.cssSelector("input[placeholder*='ass']")));
+        wd.findElement((By.cssSelector("input[placeholder$='ord']")));
+
+
+        wd.findElement(By.cssSelector("a[href='/login']"));
+        wd.findElement(By.cssSelector("input[name='email']"));
+        wd.findElement((By.cssSelector("button[name='login']")));
+        wd.findElement(By.cssSelector("form :last-child"));
+        
+    }
+
+    @AfterMethod
+    public void postCondition() {
+        // close browser
+        wd.quit();
 
     }
 }
-
