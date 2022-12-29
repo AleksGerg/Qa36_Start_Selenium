@@ -7,7 +7,7 @@ public class Start {
     WebDriver wd;
 
     @Test
-    public void myTest(){
+    public void myTest() {
         //open browser
 
         wd = new ChromeDriver();
@@ -18,7 +18,6 @@ public class Start {
         //wd.navigate().refresh();
         //wd.close(); // for 1 tab
         wd.quit(); // all tabs
-        
 
 
     }

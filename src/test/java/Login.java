@@ -125,8 +125,8 @@ public class Login {
         wd.findElement(By.cssSelector("input[name='email']"));
         wd.findElement((By.cssSelector("button[name='login']")));
         wd.findElement(By.cssSelector("form :last-child"));
-        
     }
+
 
     @AfterMethod
     public void postCondition() {
