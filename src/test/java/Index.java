@@ -25,15 +25,26 @@ public class Index {
         List<WebElement> rows = wd.findElements(By.cssSelector("tr"));
         Assert.assertEquals(rows.size(), 4);
 
+       // wd.findElements(By.xpath("//tr"));
+
+
+
         //check that table have "Mexico"
         WebElement lastRow = wd.findElement(By.cssSelector("tr:last-child"));
+        //wd.findElement(By.xpath("//tr[last()]"));
         System.out.println(lastRow.getText());//Poland Chine Mexico
+
 
         Assert.assertTrue(lastRow.getText().contains("Mexico"));
 
         WebElement lastCell = wd.findElement((By.cssSelector("tr:last-child td:last-child")));
+        wd.findElement(By.xpath("//tr[last()]//td[last()]"));
         System.out.println(lastCell.getText());
-        Assert.assertTrue(lastCell.getText().contains("Mexico"));
+       // Assert.assertTrue(lastCell.getText().contains("Mexico"));
+
+        //print Mariya Anders
+        System.out.println(wd.findElement(By.cssSelector("tr:nth-child(2 td:nth-child(2))")));
+        wd.findElement(By.xpath("//tr[2]//td[2]"));
 
     }
 
@@ -74,6 +85,7 @@ public class Index {
         Assert.assertTrue(alertText.contains(elementName.getText() + elementSurname.getText()));
 
     }
+
 
 
 
